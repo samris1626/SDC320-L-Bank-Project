@@ -1,7 +1,7 @@
 /*********************************************
 * Name: Samantha Riser
-* Date: 11/18/2025
-* Assignment: SDC320L - WK 1 - 1.5 Project
+* Date: 11/23/2025
+* Assignment: SDC320L - WK 2 - 2.2 Project
 *
 * Base class for all account types.
 */
