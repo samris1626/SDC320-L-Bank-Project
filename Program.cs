@@ -1,11 +1,15 @@
 /*********************************************
 * Name: Samantha Riser
-* Date: 11/23/2025
-* Assignment: SDC320L - WK 2 - 2.2 Project
+* Date: 11/30/2025
+* Assignment: SDC320L - WK 3
 *
-* Main application; shows welcome message and shows
-* inheritance, composition and class instantiation.
-*/
+* Main application demonstrating abstraction,
+* constructors, inheritance, access specifiers,
+* and object instantiation.
+*********************************************/
+
+using System;
+using System.Collections.Generic;
 
 namespace BankProject
 {
@@ -13,37 +17,45 @@ namespace BankProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\nWEEK 2 – OOP Demonstration\n");
-            Console.WriteLine("\nBank Account Application\n");
-            Console.WriteLine("\nBy: Samantha Riser\n");
+            Console.WriteLine("\n===========================");
+            Console.WriteLine("     WEEK 3 – Phase 3");
+            Console.WriteLine("     Bank Account System");
+            Console.WriteLine("     By: Samantha Riser");
+            Console.WriteLine("===========================\n");
 
-            Console.WriteLine("Instructions:");
-            Console.WriteLine("1. The system will create accounts.");
-            Console.WriteLine("2. It will perform deposits and withdrawals.");
-            Console.WriteLine("3. You will see polymorphism in action.\n");
+            Console.WriteLine("Welcome!");
+            Console.WriteLine("This program demonstrates:");
+            Console.WriteLine("• Abstraction (abstract class + interface)");
+            Console.WriteLine("• Constructors (default + parameterized)");
+            Console.WriteLine("• Access specifiers (public/protected/private)");
+            Console.WriteLine("• Inheritance & polymorphism\n");
 
+            // Create contact info
             ContactInfo contact = new ContactInfo(
                 "457 Elm St",
                 "555-1234",
                 "customer@email.com"
             );
 
+            // Instantiate accounts
             CheckingAccount checking = new CheckingAccount("Franklin Turls", contact, 1500.00m);
             SavingsAccount savings = new SavingsAccount("Franklin Turls", contact, 8200.00m);
 
-            List<ITransaction> transactionAccounts = new List<ITransaction>();
-            transactionAccounts.Add(checking);
-            transactionAccounts.Add(savings);
+            List<ITransaction> accounts = new List<ITransaction>() { checking, savings };
 
-            Console.WriteLine("Performing Transactions...\n");
+            Console.WriteLine("\nPerforming Transactions...\n");
 
-            foreach (var account in transactionAccounts)
+            foreach (var account in accounts)
             {
                 account.Deposit(200.00m);
                 account.Withdraw(50.00m);
             }
 
-            Console.WriteLine("Updated Account Information:\n");
+            Console.WriteLine("\nAccount Details After Transactions:\n");
+            Console.WriteLine(checking.GetAccountDetails());
+            Console.WriteLine(savings.GetAccountDetails());
+
+            Console.WriteLine("\nFull Object Printout (ToString):");
             Console.WriteLine(checking);
             Console.WriteLine(savings);
 
