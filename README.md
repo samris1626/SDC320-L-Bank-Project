@@ -1,6 +1,6 @@
 #Bank Account Management System
 --
-#SDC320L – Week 2 Project
+#SDC320L – Course Project
 #Samantha Riser
 
 --
