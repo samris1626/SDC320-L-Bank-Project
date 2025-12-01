@@ -1,7 +1,7 @@
 /*********************************************
 * Name: Samantha Riser
-* Date: 11/23/2025
-* Assignment: SDC320L - WK 2 - 2.2 Project
+* Date: 11/30/2025
+* Assignment: SDC320L - WK 3
 *
 * Interface defining the basic banking transactions.
 */
